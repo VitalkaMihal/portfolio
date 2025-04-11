@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import projectOne from "../../assets/image/image 1.jpg";
 import { Title } from "../title/title";
