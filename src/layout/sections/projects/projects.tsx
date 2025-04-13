@@ -27,7 +27,7 @@ export const StyledProject = styled.section`
 
 export const StyledProjectCards = styled.div`
     display: flex;
-    gap: 60px;
+    gap: 40px;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 140px;
