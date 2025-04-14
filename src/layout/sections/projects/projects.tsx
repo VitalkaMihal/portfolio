@@ -7,7 +7,7 @@ export const Projects = () => {
     return (
         <StyledProject>
             <WrapperContainer>
-                <Title title={"Projects"} size={"46px"}/>
+                <Title title={"Projects"} size={"46px"} top={"100px"} bottom={"70px"}/>
                 <StyledProjectCards>
                     <Card/>
                     <Card/>

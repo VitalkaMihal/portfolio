@@ -8,12 +8,14 @@ import indicatorFour from "../../../assets/indicator/indicator4.png";
 import bigGit from "../../../assets/logo/bigGit.png";
 import bigGitHub from "../../../assets/logo/bigGitHub.png";
 import bigFigma from "../../../assets/logo/bigFigma.png";
+import {WrapperContainer} from "../../../components/wrapper/WrapperContainer.tsx";
+import {theme} from "../../../styles/theme.ts";
 
 export const Technologies = () => {
   return (
     <StyledTechnologies>
-      <StyledTechnologiesContainer>
-        <Title title={"Technologies"} size={"46px"} />
+      <WrapperContainer>
+        <Title title={"Technologies"} size={"46px"} top={"100px"} bottom={"70px"}/>
         <StyledSliderContainer>
           <IndicatorSlider textSlider={"HTML"} logoSlider={indicatorOne} />
           <IndicatorSlider textSlider={"Css, Sass"} logoSlider={indicatorTwo} />
@@ -31,17 +33,14 @@ export const Technologies = () => {
           <StyledTechnologiesLogoImg src={bigGitHub} alt="" />
           <StyledTechnologiesLogoImg src={bigFigma} alt="" />
         </StyledTechnologiesLogo>
-      </StyledTechnologiesContainer>
+      </WrapperContainer>
     </StyledTechnologies>
   );
 };
 
 export const StyledTechnologies = styled.section`
-  background: #0f1624;
-`;
-
-export const StyledTechnologiesContainer = styled.div`
-  padding: 100px 150px;
+  background: ${theme.colors.secondaryBg};
+  display: flex;
 `;
 
 export const StyledSliderContainer = styled.div`

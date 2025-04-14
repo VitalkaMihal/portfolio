@@ -3,6 +3,7 @@ import {Logo} from "../../components/logo/logo";
 import {Nav} from "../../components/nav/nav";
 import {Contacts} from "../../components/contacts/contacts";
 import {WrapperContainer} from "../../components/wrapper/WrapperContainer.tsx";
+import {theme} from "../../styles/theme.ts";
 
 export const Header = () => {
     return (
@@ -26,5 +27,5 @@ export const StyledHeaderContent = styled.div`
 `;
 
 export const StyledHeader = styled.header`
-    background-color: #0f1624;
+    background-color: ${theme.colors.primaryBg};
 `;

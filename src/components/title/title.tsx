@@ -1,20 +1,19 @@
 import styled from "styled-components";
 
 type TitlePropsType = {
-  title: string;
+  title?: string;
   size?: string;
+  top?: string;
+  bottom?: string;
 };
 
-type StyledTitlePropsType = {
-  fontSize?: string;
+export const Title = ({ title, size, top, bottom }: TitlePropsType) => {
+  return <StyledTitle size={size} top={top} bottom={bottom}>{title}</StyledTitle>;
 };
 
-export const Title = ({ title, size }: TitlePropsType) => {
-  return <StyledTitle fontSize={size}>{title}</StyledTitle>;
-};
-
-export const StyledTitle = styled.h2<StyledTitlePropsType>`
+export const StyledTitle = styled.h2<TitlePropsType>`
   font-weight: 600;
-  font-size: ${(props) => props.fontSize || "30px"};
-  color: #fff;
+  font-size: ${(props) => props.size || "30px"};
+  margin-top:${(props) => props.top || "40px"}; 
+  margin-bottom: ${(props) => props.bottom || "20px"};
 `;

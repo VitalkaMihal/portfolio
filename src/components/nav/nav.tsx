@@ -29,6 +29,4 @@ export const StyledUl = styled.ul`
 export const StyledA = styled.a`
   font-weight: 500;
   font-size: 16px;
-  color: #fff;
-  text-decoration: none;
 `;
