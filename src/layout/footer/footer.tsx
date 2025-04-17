@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Contacts } from "../../components/contacts/contacts";
+import { Contacts } from "../../components/contacts/Contacts.tsx";
 
 export const Footer = () => {
   return (

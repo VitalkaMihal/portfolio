@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Title} from "../../../components/title/title";
+import {Title} from "../../../components/title/Title.tsx";
 import {Card} from "../../../components/card/card";
 import {WrapperContainer} from "../../../components/wrapper/WrapperContainer.tsx";
 

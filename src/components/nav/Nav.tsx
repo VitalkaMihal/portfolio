@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {theme} from "../../styles/Theme.ts";
 
 export const Nav = () => {
   return (
@@ -18,15 +19,24 @@ export const Nav = () => {
   );
 };
 
-export const StyledNav = styled.nav``;
+const StyledNav = styled.nav``;
 
-export const StyledUl = styled.ul`
+const StyledUl = styled.ul`
   display: flex;
   list-style-type: none;
   gap: 80px;
+  @media ${theme.media.desktop} {
+    gap: 35px;
+  }
+  @media ${theme.media.tablet} {
+    flex-direction: column;
+    gap: 45px;
+    margin-top: 25px;
+    margin-bottom: 75px;
+  }
 `;
 
-export const StyledA = styled.a`
+const StyledA = styled.a`
   font-weight: 500;
   font-size: 16px;
 `;

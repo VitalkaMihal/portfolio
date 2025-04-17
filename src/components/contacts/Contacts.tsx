@@ -27,7 +27,9 @@ export const Contacts = () => {
   );
 };
 
-export const StyledContacts = styled.div``;
+export const StyledContacts = styled.div`
+ 
+`;
 
 export const StyledUlContacts = styled.ul`
   display: flex;

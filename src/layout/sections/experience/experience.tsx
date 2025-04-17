@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Title } from "../../../components/title/title";
+import { Title } from "../../../components/title/Title.tsx";
 import { ExperienceCard } from "../../../components/experienceCard/experienceCard";
 
 export const Experience = () => {

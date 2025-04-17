@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import {Logo} from "../../components/logo/logo";
-import {Nav} from "../../components/nav/nav";
-import {Contacts} from "../../components/contacts/contacts";
+import {Nav} from "../../components/nav/Nav.tsx";
+import {Contacts} from "../../components/contacts/Contacts.tsx";
 import {WrapperContainer} from "../../components/wrapper/WrapperContainer.tsx";
-import {theme} from "../../styles/theme.ts";
+import {theme} from "../../styles/Theme.ts";
+import {BurgerButton} from "../../components/buttons/BurgerButton.tsx";
 
 export const Header = () => {
     return (
@@ -11,21 +12,37 @@ export const Header = () => {
             <WrapperContainer>
                 <StyledHeaderContent>
                     <Logo/>
+                    <StyledHeaderMenu>
                     <Nav/>
                     <Contacts/>
+                    </StyledHeaderMenu>
                 </StyledHeaderContent>
+                <BurgerButton/>
             </WrapperContainer>
         </StyledHeader>
     );
 };
 
-export const StyledHeaderContent = styled.div`
-    height: 100px;
+const StyledHeaderContent = styled.div`
     display: flex;
+    height: 100px;
     justify-content: space-between;
     align-items: center;
 `;
 
-export const StyledHeader = styled.header`
+
+const StyledHeaderMenu = styled.div`
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    @media ${theme.media.tablet}{
+        display: none;
+    } 
+    
+`
+
+const StyledHeader = styled.header`
     background-color: ${theme.colors.primaryBg};
 `;

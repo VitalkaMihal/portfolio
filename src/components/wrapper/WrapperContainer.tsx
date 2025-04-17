@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {theme} from "../../styles/Theme.ts";
 
 export const WrapperContainer = ({children}:any) => {
     return (
@@ -11,4 +12,7 @@ export const WrapperContainer = ({children}:any) => {
 const StyledWrapper = styled.div`
     width: 85%;
     margin: 0 auto;
+    @media ${theme.media.desktop}{
+        width: 95%;
+    }
 `

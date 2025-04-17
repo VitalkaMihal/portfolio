@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Title } from "../../../components/title/title";
+import { Title } from "../../../components/title/Title.tsx";
 import { IndicatorSlider } from "../../../components/indicatorSlider/indicatorSlider";
 import indicatorOne from "../../../assets/indicator/indicator1.png";
 import indicatorTwo from "../../../assets/indicator/indicator2.png";
@@ -9,7 +9,7 @@ import bigGit from "../../../assets/logo/bigGit.png";
 import bigGitHub from "../../../assets/logo/bigGitHub.png";
 import bigFigma from "../../../assets/logo/bigFigma.png";
 import {WrapperContainer} from "../../../components/wrapper/WrapperContainer.tsx";
-import {theme} from "../../../styles/theme.ts";
+import {theme} from "../../../styles/Theme.ts";
 
 export const Technologies = () => {
   return (

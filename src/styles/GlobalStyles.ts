@@ -1,5 +1,5 @@
 import {createGlobalStyle} from "styled-components";
-import {theme} from "./theme.ts";
+import {theme} from "./Theme.ts";
 
 export const GlobalStyles = createGlobalStyle`
     *,
@@ -9,6 +9,7 @@ export const GlobalStyles = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         color: ${theme.colors.font};
+        font-family: "Poppins", sans-serif;
     }
     a {
         text-decoration: none;

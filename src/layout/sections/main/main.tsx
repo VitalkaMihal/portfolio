@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import photo from "../../../assets/photo/foto-resume.jpg";
-import {Button} from "../../../components/button/button";
+import {Button} from "../../../components/buttons/Button.tsx";
 import {WrapperContainer} from "../../../components/wrapper/WrapperContainer.tsx";
 
 export const Main = () => {
