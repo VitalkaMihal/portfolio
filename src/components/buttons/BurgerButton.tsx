@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import {theme} from "../../styles/Theme.ts";
 
 
@@ -30,6 +30,10 @@ const StyledBurgerButton = styled.button<{isOpen: boolean}>`
         left: 40px;
         bottom: 50px;
         
+        ${props => props.isOpen && css<{isOpen: boolean}>`
+            background-color: rgba(255, 255, 255, 0);
+        `}
+        
         &::before {
             content: "";
             display: block;
@@ -38,6 +42,9 @@ const StyledBurgerButton = styled.button<{isOpen: boolean}>`
             background-color: ${theme.colors.font};
             position: absolute;
             transform: translateY(-10px);
+            ${props => props.isOpen && css<{isOpen: boolean}>`
+                transform: rotate(-45deg);
+        `}
         }
         
         &::after {
@@ -48,6 +55,10 @@ const StyledBurgerButton = styled.button<{isOpen: boolean}>`
             background-color: ${theme.colors.font};
             position: absolute;
             transform: translateY(10px);
+            ${props => props.isOpen && css<{isOpen: boolean}>`
+                transform: rotate(45deg);
+                width: 36px;
+        `}
         }
         
     }
