@@ -2,6 +2,7 @@ import styled from "styled-components";
 import photo from "../../../assets/photo/foto-resume.jpg";
 import {Button} from "../../../components/buttons/Button.tsx";
 import {WrapperContainer} from "../../../components/wrapper/WrapperContainer.tsx";
+import {theme} from "../../../styles/Theme.ts";
 
 export const Main = () => {
     return (
@@ -23,38 +24,58 @@ export const Main = () => {
     );
 };
 
-export const StyledMain = styled.div`
-    background-color: #0f1624;
+const StyledMain = styled.div`
+    background-color: ${theme.colors.primaryBg};
     display: flex;
 `;
 
-export const StyledMainContent = styled.div`
+const StyledMainContent = styled.div`
     margin: 125px 0;
     display: flex;
     justify-content: space-between;
+    @media ${theme.media.tablet} {
+       flex-direction: column-reverse;
+        align-items: center;
+    }
 `;
 
-export const StyledInfo = styled.div`
-    color: #fff;
-    margin: 80px 90px 80px 0;
+const StyledInfo = styled.div`
+    width: 60%;
+    @media ${theme.media.desktop} {
+        width: 335px;
+    }
+    
 `;
 
-export const StyledPhoto = styled.img`
-    border-radius: 50px 0;
+const StyledPhoto = styled.img`
     width: 380px;
     height: 450px;
     object-fit: cover;
-    border: 2px solid linear;
+    border: 3px solid transparent;
+    border-image-source: ${theme.colors.linear};
+    border-image-slice: 1;
+    border-radius: 50px 0;
+    @media ${theme.media.desktop} {
+        width: 335px;
+        height: 400px;
+    }
 `;
 
-export const StyledProfession = styled.h1`
+const StyledProfession = styled.h1`
     font-weight: 600;
     font-size: 54px;
-    margin: 0;
+    margin-top: 75px;
+    @media ${theme.media.desktop} {
+        margin-top: 0;
+        font-size: 48px;
+    }
+    @media ${theme.media.desktop} {
+        font-size: 36px;
+    }
+    
 `;
 
-export const StyledAboutMe = styled.div`
-    width: 80%;
+const StyledAboutMe = styled.div`
     margin-top: 15px;
     margin-bottom: 60px;
 `;

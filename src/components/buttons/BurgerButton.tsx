@@ -7,11 +7,11 @@ export const BurgerButton = () => {
 };
 
 const StyledBurgerButton = styled.button<{isOpen: boolean}>`
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     position: absolute;
-    top: -100px;
-    right: -100px;
+    top: 0;
+    right: 0;
     z-index: 99999;
     background-color: ${theme.colors.primaryBg};
     border: none;
@@ -60,6 +60,5 @@ const StyledBurgerButton = styled.button<{isOpen: boolean}>`
                 width: 36px;
         `}
         }
-        
     }
 `

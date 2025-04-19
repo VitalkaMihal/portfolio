@@ -2,6 +2,7 @@ import styled from "styled-components";
 import {Title} from "../../../components/title/Title.tsx";
 import {Card} from "../../../components/card/card";
 import {WrapperContainer} from "../../../components/wrapper/WrapperContainer.tsx";
+import {theme} from "../../../styles/Theme.ts";
 
 export const Projects = () => {
     return (
@@ -20,7 +21,7 @@ export const Projects = () => {
 };
 
 export const StyledProject = styled.section`
-    background: #161d2a;
+    background: ${theme.colors.secondaryBg};
     display: flex;
 `;
 
@@ -31,4 +32,8 @@ export const StyledProjectCards = styled.div`
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 140px;
+    
+    @media ${theme.media.desktop} {
+        justify-content: center;
+    }
 `;
