@@ -1,9 +1,12 @@
 import styled from "styled-components";
 import { Contacts } from "../../components/contacts/Contacts.tsx";
+import { WrapperContainer } from "../../components/wrapper/WrapperContainer.tsx";
+import {theme} from "../../styles/Theme.ts";
 
 export const Footer = () => {
   return (
     <StyledFooter>
+      <WrapperContainer>
       <StyledFooterContainer>
         <StyledContactMe>
           <StyledCallMe>
@@ -13,44 +16,48 @@ export const Footer = () => {
             </div>
           </StyledCallMe>
           <StyledCallMe>
-            <div>Email:</div>
-            <div>
+            <span>Email:</span>
               <StyledCallMeA href=""> xxx@xyz.com</StyledCallMeA>
-            </div>
           </StyledCallMe>
         </StyledContactMe>
 
         <Contacts />
       </StyledFooterContainer>
+      </WrapperContainer>
     </StyledFooter>
   );
 };
 
 export const StyledContactMe = styled.div`
-  width: 40%;
   display: flex;
   justify-content: space-between;
   gap: 40px;
 `;
 
 export const StyledCallMe = styled.div`
+  display: flex;
+  flex-direction: column;
   font-weight: 600;
   font-size: 22px;
-  color: #fff;
 `;
 export const StyledCallMeA = styled.a`
   text-decoration: none;
-  color: #fff;
 `;
 
 export const StyledFooterContainer = styled.div`
-  margin: 25px 100px;
+  margin: 25px 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  @media ${theme.media.mobile} {
+    justify-content: center;
+  }
 `;
 
 export const StyledFooter = styled.footer`
-  background-color: #0f1624;
+  background-color: ${theme.colors.primaryBg};
   display: flex;
 `;

@@ -21,7 +21,7 @@ export const Card = () => {
   );
 };
 
-export const StyledCard = styled.div`
+const StyledCard = styled.div`
   border: 1px solid ${theme.colors.border};
   border-radius: 50px 0;
   width: 550px;
@@ -36,12 +36,12 @@ export const StyledCard = styled.div`
     }
 
     @media ${theme.media.mobile} {
-        width: 345px;
+        width: 330px;
         height: 560px;
     }
 `;
 
-export const StyledCardImage = styled.img`
+const StyledCardImage = styled.img`
   border-radius: 24px 8px 8px 8px;
   width: 500px;
   height: 280px;
@@ -52,12 +52,12 @@ export const StyledCardImage = styled.img`
     }
 
     @media ${theme.media.mobile} {
-        width: 295px;
+        width: 285px;
         height: 220px;
     }
 `;
 
-export const StyledCardTitle = styled.div`
+const StyledCardTitle = styled.div`
   display: flex;
   justify-content: center;
 
@@ -68,7 +68,7 @@ export const StyledCardTitle = styled.div`
         }
 `;
 
-export const StyledCardText = styled.div`
+const StyledCardText = styled.div`
   margin: 40px 0 50px 0;
   font-weight: 500;
   font-size: 18px;
@@ -82,10 +82,10 @@ export const StyledCardText = styled.div`
     }
 `;
 
-export const StyledCardLine = styled.div`
+const StyledCardLine = styled.div`
   margin: 0 auto;
   border-radius: 83px;
-  width: 300px;
+  width: 280px;
   height: 4px;
   background: ${theme.colors.linear};
 `;

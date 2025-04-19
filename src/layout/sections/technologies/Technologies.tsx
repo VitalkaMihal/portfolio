@@ -1,10 +1,6 @@
 import styled from "styled-components";
 import { Title } from "../../../components/title/Title.tsx";
-import { IndicatorSlider } from "../../../components/indicatorSlider/indicatorSlider";
-import indicatorOne from "../../../assets/indicator/indicator1.png";
-import indicatorTwo from "../../../assets/indicator/indicator2.png";
-import indicatorThree from "../../../assets/indicator/indicator3.png";
-import indicatorFour from "../../../assets/indicator/indicator4.png";
+import { IndicatorSlider } from "../../../components/indicatorSlider/IndicatorSlider.tsx";
 import bigGit from "../../../assets/logo/bigGit.png";
 import bigGitHub from "../../../assets/logo/bigGitHub.png";
 import bigFigma from "../../../assets/logo/bigFigma.png";
@@ -17,12 +13,12 @@ export const Technologies = () => {
       <WrapperContainer>
         <Title title={"Technologies"} size={"46px"} top={"100px"} bottom={"70px"}/>
         <StyledSliderContainer>
-          <IndicatorSlider textSlider={"HTML"} logoSlider={indicatorOne} />
-          <IndicatorSlider textSlider={"Css, Sass"} logoSlider={indicatorTwo} />
-          <IndicatorSlider textSlider={"React"} logoSlider={indicatorThree} />
+          <IndicatorSlider textSlider={"HTML"} widthSlider={"70%"} />
+          <IndicatorSlider textSlider={"Css, Sass"} widthSlider={"80%"} />
+          <IndicatorSlider textSlider={"React"} widthSlider={"60%"} />
           <IndicatorSlider
             textSlider={"Styled components"}
-            logoSlider={indicatorFour}
+            widthSlider={"90%"}
           />
         </StyledSliderContainer>
         <StyledSkillsContainer>
@@ -41,10 +37,18 @@ export const Technologies = () => {
 export const StyledTechnologies = styled.section`
   background: ${theme.colors.secondaryBg};
   display: flex;
+  
+  @media ${theme.media.tablet} {
+    h2 {
+      font-size: 32px;
+      text-align: center;
+    }
+    
+  }
 `;
 
 export const StyledSliderContainer = styled.div`
-  width: 900px;
+  width: 70%;
   margin: 0 auto;
 `;
 
@@ -52,12 +56,17 @@ export const StyledSkillsContainer = styled.div`
   margin: 120px 0 70px 0;
   display: flex;
   justify-content: center;
+  @media ${theme.media.tablet} {
+    h2 {
+      font-size: 32px;
+    }
 `;
 
 export const StyledTechnologiesLogo = styled.div`
   display: flex;
   gap: 50px;
   justify-content: center;
+  flex-wrap: wrap;
 `;
 
 export const StyledTechnologiesLogoImg = styled.img``;

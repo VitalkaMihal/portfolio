@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Logo} from "../../components/logo/logo";
+import {Logo} from "../../components/logo/Logo.tsx";
 import {Nav} from "../../components/nav/Nav.tsx";
 import {Contacts} from "../../components/contacts/Contacts.tsx";
 import {WrapperContainer} from "../../components/wrapper/WrapperContainer.tsx";
@@ -45,4 +45,6 @@ const StyledHeaderMenu = styled.div`
 
 const StyledHeader = styled.header`
     background-color: ${theme.colors.primaryBg};
+    position: fixed;
+    width: 100%;
 `;

@@ -5,6 +5,7 @@ export const theme = {
         font: "#fff",
         linear: "linear-gradient(270deg, #13adc7 0%, #6978d1 66.67%, #945dd6 100%)",
         border: "#a39d9d",
+        sliderBg: "#162950",
     },
     media: {
         desktopBig: "screen and (max-width: 1440px)",

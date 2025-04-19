@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {Title} from "../../../components/title/Title.tsx";
-import {Card} from "../../../components/card/card";
+import {Card} from "../../../components/card/Card.tsx";
 import {WrapperContainer} from "../../../components/wrapper/WrapperContainer.tsx";
 import {theme} from "../../../styles/Theme.ts";
 
@@ -20,13 +20,13 @@ export const Projects = () => {
     );
 };
 
-export const StyledProject = styled.section`
+const StyledProject = styled.section`
     background: ${theme.colors.secondaryBg};
     display: flex;
 `;
 
 
-export const StyledProjectCards = styled.div`
+const StyledProjectCards = styled.div`
     display: flex;
     gap: 40px;
     flex-wrap: wrap;

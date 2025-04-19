@@ -17,7 +17,10 @@ export const Main = () => {
                         </StyledAboutMe>
                         <Button textButton={"Let’s Begin"}/>
                     </StyledInfo>
-                    <StyledPhoto src={photo} alt="photo"/>
+                    <StyledContainerPhoto>
+                        <StyledPhoto src={photo} alt="photo"/>
+                    </StyledContainerPhoto>
+
                 </StyledMainContent>
             </WrapperContainer>
         </StyledMain>
@@ -47,18 +50,25 @@ const StyledInfo = styled.div`
     
 `;
 
-const StyledPhoto = styled.img`
+const StyledContainerPhoto = styled.div`
     width: 380px;
     height: 450px;
-    object-fit: cover;
-    border: 3px solid transparent;
-    border-image-source: ${theme.colors.linear};
-    border-image-slice: 1;
+    background: ${theme.colors.linear};
     border-radius: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @media ${theme.media.desktop} {
         width: 335px;
         height: 400px;
     }
+`
+
+const StyledPhoto = styled.img`
+    width: 98%;
+    height: 98%;
+    object-fit: cover;
+    border-radius: 45px 0;
 `;
 
 const StyledProfession = styled.h1`
