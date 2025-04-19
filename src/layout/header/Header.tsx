@@ -45,6 +45,7 @@ const StyledHeaderMenu = styled.div`
 
 const StyledHeader = styled.header`
     background-color: ${theme.colors.primaryBg};
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
 `;
