@@ -4,6 +4,7 @@ import {Button} from "../../../components/buttons/Button.tsx";
 import {WrapperContainer} from "../../../components/wrapper/WrapperContainer.tsx";
 import {theme} from "../../../styles/Theme.ts";
 import Typewriter from 'typewriter-effect';
+import Tilt from 'react-parallax-tilt';
 
 export const Main = () => {
     return (
@@ -28,10 +29,11 @@ export const Main = () => {
                         </StyledAboutMe>
                         <Button textButton={"Let’s Begin"}/>
                     </StyledInfo>
-                    <StyledContainerPhoto>
-                        <StyledPhoto src={photo} alt="photo"/>
-                    </StyledContainerPhoto>
-
+                    <Tilt>
+                        <StyledContainerPhoto>
+                            <StyledPhoto src={photo} alt="photo"/>
+                        </StyledContainerPhoto>
+                    </Tilt>
                 </StyledMainContent>
             </WrapperContainer>
         </StyledMain>
