@@ -60,4 +60,5 @@ export const StyledFooterContainer = styled.div`
 export const StyledFooter = styled.footer`
   background-color: ${theme.colors.primaryBg};
   display: flex;
+    position: relative;
 `;

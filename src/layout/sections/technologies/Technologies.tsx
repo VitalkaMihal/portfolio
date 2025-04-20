@@ -37,6 +37,7 @@ export const Technologies = () => {
 export const StyledTechnologies = styled.section`
   background: ${theme.colors.secondaryBg};
   display: flex;
+  position: relative;
   
   @media ${theme.media.tablet} {
     h2 {

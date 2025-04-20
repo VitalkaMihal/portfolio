@@ -23,6 +23,7 @@ export const Projects = () => {
 const StyledProject = styled.section`
     background: ${theme.colors.secondaryBg};
     display: flex;
+    position: relative;
 `;
 
 

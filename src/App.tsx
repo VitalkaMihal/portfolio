@@ -5,11 +5,12 @@ import {Technologies} from "./layout/sections/technologies/Technologies.tsx";
 import {GlobalStyles} from "./styles/GlobalStyles.ts";
 import {Experience} from "./layout/sections/experience/Experience.tsx";
 import {Footer} from "./layout/footer/Footer.tsx";
+import {Particle} from "./components/particle/Particle.tsx";
 
 function App() {
     return (
-        <>
             <div className="App">
+                <Particle/>
                 <Header/>
                 <Main/>
                 <Projects/>
@@ -18,7 +19,6 @@ function App() {
                 <Footer />
                 <GlobalStyles/>
             </div>
-        </>
     )
 }
 
