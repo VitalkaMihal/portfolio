@@ -3,7 +3,6 @@ import {Main} from "./layout/sections/main/Main.tsx";
 import {Projects} from "./layout/sections/projects/Projects.tsx";
 import {Technologies} from "./layout/sections/technologies/Technologies.tsx";
 import {GlobalStyles} from "./styles/GlobalStyles.ts";
-// import {Menu} from "./components/menu/Menu.tsx";
 import {Experience} from "./layout/sections/experience/Experience.tsx";
 import {Footer} from "./layout/footer/Footer.tsx";
 
@@ -12,7 +11,6 @@ function App() {
         <>
             <div className="App">
                 <Header/>
-                {/*<Menu/>*/}
                 <Main/>
                 <Projects/>
                 <Technologies/>

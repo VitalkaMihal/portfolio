@@ -4,7 +4,7 @@ import {Nav} from "../../components/nav/Nav.tsx";
 import {Contacts} from "../../components/contacts/Contacts.tsx";
 import {WrapperContainer} from "../../components/wrapper/WrapperContainer.tsx";
 import {theme} from "../../styles/Theme.ts";
-import {BurgerButton} from "../../components/buttons/BurgerButton.tsx";
+import { BurgerMenu} from "../../components/burger/BurgerMenu.tsx";
 
 export const Header = () => {
     return (
@@ -17,7 +17,7 @@ export const Header = () => {
                     <Contacts/>
                     </StyledHeaderMenu>
                 </StyledHeaderContent>
-                <BurgerButton/>
+                <BurgerMenu/>
             </WrapperContainer>
         </StyledHeader>
     );
