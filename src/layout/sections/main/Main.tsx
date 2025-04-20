@@ -3,6 +3,7 @@ import photo from "../../../assets/photo/foto-resume.jpg";
 import {Button} from "../../../components/buttons/Button.tsx";
 import {WrapperContainer} from "../../../components/wrapper/WrapperContainer.tsx";
 import {theme} from "../../../styles/Theme.ts";
+import Typewriter from 'typewriter-effect';
 
 export const Main = () => {
     return (
@@ -10,7 +11,17 @@ export const Main = () => {
             <WrapperContainer>
                 <StyledMainContent>
                     <StyledInfo>
-                        <StyledProfession>Front End Developer</StyledProfession>
+                        <StyledProfession>
+                            <p>Front End Developer</p>
+                            <Typewriter
+                                options={{
+                                    strings: ['Front End Developer'],
+                                    autoStart: true,
+                                    loop: true,
+                                    delay: 50,
+                                }}
+                            />
+                        </StyledProfession>
                         <StyledAboutMe>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
@@ -82,7 +93,9 @@ const StyledProfession = styled.h1`
     @media ${theme.media.desktop} {
         font-size: 36px;
     }
-    
+    p {
+        display: none;
+    }
 `;
 
 const StyledAboutMe = styled.div`
